@@ -154,14 +154,14 @@ class CardContainer extends React.Component {
     super();
     this.state = {
       cards: Immutable.fromJS([{
-        word: 'Jazz',
-        description: 'A type of music of black American origin characterized by improvisation, syncopation, and usually a regular or forceful rhythm, emerging at the beginning of the 20th century.',
+        word: 'Zero Conditional Mean Assumption',
+        description: 'A key assumption used in multiple regression analysis that states that, given any values of the explanatory variables, the expected value of the error equals zero',
       }, {
-        word: 'Reggae',
-        description: 'Music like Bob Marley, man.',
+        word: 'Unrestricted Model',
+        description: 'In hypothesis testing, the model that has no restrictions placed on its parameters',
       }, {
-        word: 'Folk',
-        description: 'Music like Bob Dylan, man.',
+        word: 'Total Sum of Squares (SST)',
+        description: 'The total sample variation in a dependent variable about its sample average.',
       }
     ]),
       cardNumber: 0
