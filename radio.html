@@ -171,13 +171,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
    <button class="accordion">INTRODUCTION</button>
       <div class="panel">
         <p>In the beginning of the digital technology era, policymakers and interested stakeholders discussed at great length the importance of the information highway and its pertinence for the continuance of technologic innovation. Discussions such as these took place in the early 90’s between interested service providers and operators like Time Warner Cable and U.S. West (National Archives II Record Group 417NIIAC-3) – who were interested in bringing a “digital pathway into the home”- just as commonly as they occurred between the Association of Computing Machinery (ACM) while they were positing the information highway and its definitions (National Archives II Record Group 417 NIIAC-6). This information highway – electromagnetic spectrum, also referred to in this paper as radio spectrum or “spectrum” for short – would eventually become the very resource that connects and drives various technologies & services (e.g. cellular devices, Wi-Fi, computers, wearable technologies, home assistants, etc.) in the 21st century. </p>
-        <p>TBD</p>
-      </div>
+        <p>Within a few years, even more innovative technologies will emerge within the commercial sphere. With such a projected influx of technologies that will be dependent upon electromagnetic spectrum (such as fully autonomous vehicles, fifth generation cellular services, embeddable technologies, and alike), an increased interest in the regulation – and by extension enforcement – of spectrum has come into the forefront regarding present-day discussion and concern of future spectrum management.  </p>
+        <p>Through this work, I began to question how enforcement is being adjudicated currently at the regulatory authority level and if an automated enforcement structure were to be created amongst incumbents, would the Federal Communications Commission be prepared for such an advancement within the policy space. The work that I have been accomplishing for the past year through the courses for Digital Studies and Methods is a culmination of the research I have been working on and hope to use towards my dissertation in the future. </p>
+        
+     </div>
    
    <button class="accordion">THE DATASET</button>
       <div class="panel">
+         <P>My primary objective with this dataset was to parse out spectrum specific violations in order to gain a better understanding of how prevalent spectrum interference is with regards to the current technological landscape – which for commercial use is overseen by the FCC. Once I identified my data source and specific subset, I needed to figure out the best way to collect this data in a useful manner. The first constraint that I came across with my dataset, was that each record was encoded as an html document. Typically, with online documents, one can extract the data by scraping, which uses code to parse out specific information needed. This ended up being a cause for concern due to the manner in which it was encoded. Each html file was coded in such a way that it hindered current data collection practices – scraping. The problem with this approach – in terms of my data – was that the information contained in the documents was not organized under any specific tag. Using tags to code within html is a common practice. For example, if I am constructing a document such as this self-reflective essay, I might utilize an <h1> tag to code the title of this paper, but would use the <p> tag to construct each paragraph. Instead, all of the documents’ content (title, case information, etc.) is encoded under the tag <pre> which renders common scraping practices futile.</p>
          <p>Since the FCC Enforcement Bureau's database is primarily html files (with all of the document content coded under "pre"), I manually investigated each of the records (8040 in total) for enforcement actions and extracted 1168 radio spectrum violations. Through the process of coding each case manually, I have realized there are implicit and explicit cases of spectrum interference. Explicit cases include enforcement actions where the frequency band the violator inteterferred with, used illegally, or intentionally blocked signals on are named outright in their case file. Other cases required more research. These were records where the violator received an enforcement action, but their document only states that they interfered with, used, or blocked radio frequencies (sometimes with public safety bands) and no actual frequency band has been documented. Cases of this ilk were designated as spectrum implicit during the second phase of my research. It appears that this may be a lack of standard (or lack of adhered standard) across the different enforcement bureaus (which cover regions 1, 2, 3 and the FCC Headquarters in D.C.). Each manually coded case for enforcement (whether radio interference explicit/implicit or not) was coded into a spreadsheet. Attributes that I captured included Name of violator, case number (linked to the original html document on the FCC transition.fcc.gov website), date of violation, location, frequency (what frequency they interfered with and/or transmitted on illegally), enforcement type (e.g. warning, notice of violation, penalty (with fine if appropriate), publication (e.g. NOV, FOUO, Consent Decree, Forfeiture, etc.), entity type (e.g. business, individual, duo, religious establishment, or educational institution), enforcement bureau dept region, enforcement bureau department location, and whether or not the violator was a license holder at the time of their offense (which was annotated in their case file).</p>  
-         <P>TBD</p>
+         <P> Additionally, I had the opportunity to conduct some of my research at National Archives II in College Park, MD. My reasoning to do this was twofold. Firstly, I wanted to see if there was a hard copy available of the records that were online – some of the online links were broken or missing information. Secondly, some of the records between the years 2004 and 1999 eluded to records regarding their case prior to 1999. During my visit at the archives, I was hoping to identify these cases in order to have a better understanding of their violation/ offense. Unfortunately, this would be the second data constraint I would endure.</p>
+         <p>More on this specific dataset can be viewed by clicknig the Project Data icon.</p>
       </div>
 
    <button class="accordion">PREVIOUS ITERATIONS</button>
@@ -186,13 +190,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        <p><i>FIRST MILESTONE - LIS 3600 | FALL 2017</i></p>
        
           <div class="panel">
-              <p>TBD</p>
            <p>As this is the first phase of this research project, the main questions I wanted to answer were: 
               <ol>
                  <li> How often does radio spectrum interference take place?</li>
                  <li>Who are the main offenders/violators?</li>
                  <li>What kind of interference and/or violations related to radio frequency occur?</li>
               </ol>
+           <p>Since this project component, as well as my capstone project overall was conducted in an iterative manner, my preliminary findings – for the first milestone/iteration – that occurred during fall 2017 were derived from the 2017 data (at that time it was all that I had collected by October). Using the preliminary data and results, I decided to attempt Google Fusion Tables for spatial analysis. I selected this tool because it appeared to have features that would allow me to analyze and visualize my data in such a way that I would be able to have outputs that would be more than just “dots on a map”. Through adopting this approach, it appeared as though spectrum interference was not as prevalent among the violations as I had previously assumed. The main offenders during the initial analysis lead me to hypothesize that main offenders were individuals operating unlicensed radio operations from residential areas. Additionally, these offenders appeared to be clustered along the coastal lines. Lastly, the kinds of offenses/type of interference was a varied amongst the different frequency bands – no specific frequency allocation appeared to be the target.</p>
          Although the FCC currently has a map dedicated to enforcement of pirate radio, that is only one type of interference/violation. As radio spectrum moves to become an even more shared environment between commercial and federal users, I hope to find out what (if any) other interference/violations happen within these frequencies in order to better determine how to automate spectrum enforcement.</p>
           </div>
 
@@ -228,30 +232,24 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
    
     <p><i>SECOND MILESTONE - LIS 3902 | SPRING 2018</i></p>
   
-     <p>TBD</p>
+     <p>By the time I needed to continue my research project, I was concerned about not having a large enough dataset to draw substantial conclusions and/or utilize digital methods/ the selected tools in a more meaningful way. Therefore, during this milestone, I focused my efforts on more data collection within the initial iterations. My dataset objective for this semester was to collect records from 2010-2013.</p>
   
     <p><i>Initial Results – Phase I</i></p>  
     
-         <p>TBD</p> 
+         <p>Towards the end of this iteration, my dataset now included records spanning from 2017-2010. I now had roughly 2300 cases and 356 spectrum violations to analyze. My conclusion was that this amount was still not substantial enough to deem spectrum violations as a pervasive violation. During this time, I also ran into user errors with Tableau where I was throwing an error for 165 data points. Despite this hiccup, many of the violations still appeared to be occurring along the coastal areas.</p> 
   
           <figure>
-               <p><img src="TBD" width="450" height="320" align="middle" h border="5">Figure 1. - TBD</p>
+            <center><iframe width="800" height="600" frameborder="0" scrolling="no" src="https://drive.google.com/file/d/1sO8CZ6ge9M_94h0s_jY2bIBjqYid7ntY/view?usp=sharing"></iframe></center>
           </figure>
 
 
           <figure>
-               <p><img src="TBD" width="465" height="320" align="middle" border="5">Figure 2. - TBD</p>
+               <center><iframe width="800" height="600" frameborder="0" scrolling="no" src="https://drive.google.com/file/d/1QVq0bJQPKBZW3vwiP_M07r4nDmwmADQn/view?usp=sharing"></iframe></center>
           </figure>
-   
-
-          <figure>
-              <img src="TBD" width="450" height="320"  border="5">Figure 3. - TBD</p>
-          </figure>
-
    
 
           <figure>  
-               <img src="TBD" width="450" height="320" padding-bottom="10px" border="5">Figure 4. - TBD</p>
+              <center><iframe width="800" height="600" frameborder="0" scrolling="no" src="https://pitt-my.sharepoint.com/:v:/g/personal/jsr67_pitt_edu/ETR91s8j5pxBk4dFkCYX494B-THbyxvZs-5LsJzkuzNP7g?e=9ypG89"></iframe></center>
           </figure>
 
    </div>
@@ -259,23 +257,45 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
    <button class="accordion">POINTS OF FAILURE</button>
        <div class="panel">
-          <p>TBD</p>
-          <p>TBD</p>
-          <p>TBD</p>
+          <p>When I began this research project, I knew I wanted to analyze and represent my results spatially. Unfortunately, I didn’t exactly have the knowledge base to accomplish this in the same or similar manner as the Guardian article. Furthermore, I knew even less about cartography. With that said, the original tools I reviewed and eventually dismissed included Color Brewer, Scribble Maps, QGIS, and CAST. In addition to spatial analysis, I was also interested in possibly using topic modelling and/or document analysis to further investigate the spectrum implicit cases.</p>
+          <p>Color Brewer, although interesting, did not allow for the depiction of actual data. In terms of visual representation, this meant that if I decided to implement this tool, I would have been subjected to results that were akin to “dots on a map” which is what I expressly did not want as a final result. Scribble Maps on the other hand, appeared to be promising. Yet, in terms of data collection and learning a new tool from scratch – with no previous experience or knowledge – this application became intimidating and time consuming. QGIS, although free, was also intimidating and would be a learning curve. I feared that I would not have been able to learn it well enough in order to successfully use it for my 2017 iteration. CAST was also labor intensive. Additionally, in order to utilize this tool, I would have needed to download additional components such as GeoDa and PySal – which I was unable to do on my laptop as it was already at its limit with software. Lastly, as discussed in the previous iterations section, I attempted Google Fusion Tables and Google Maps. Both of these applications left me with the “dots on a map” feeling, therefore I ditched these approaches for Tableau where I was able to accomplish more than just spatial visualization.</p>
        </div>
 
   <button class="accordion">ADOPTED DIGITAL METHODS</button>
      <div class="panel">
-        <p>TBD</p>
-        <p>TBD</p>
-        <p>TBD</p>
+        <p>When considering time that needed to be allocated to data collection and learning a digital tool, I decided to utilize Tableau to analyze my dataset. Even though Google Fusion Tables and Google Maps were pretty simple to use, they didn’t have the same additional functionality as Tableau. When I first downloaded Tableau and began using it, I was slightly frustrated, however, the more I used it, I realized it was pretty intuitive. The only real issues I ran into with Tableau was that I am unable to embed my work within a website – this would require me to utilize the online server and make my data public (which I do not feel that my research is ready for unlimited public consumption). In order to use a private Tableau server, I would need access to the University’s Tableau server access, which I am unable to do because I am a student and no a primary investigator for a research project.</p>
+        <p>In terms of document analysis, instead of attempting to analyze each link specifically, I decided to upload the spreadsheet of my dataset. Although I knew it would not yield the same results as the actual FCC records, I was still able to get some interesting results on my dataset.</p>
      </div>
 
   <button class="accordion">LEARNING OPPORTUNITIES</button>
      <div class="panel">
-        <p>TBD</p>
-        <p>TBD</p>
-        <p>TBD</p>
+        <h5></h5>
+          <p>TBD</p>
+      
+        <h5>DATA 101: INTRODUCTION TO MAPPING</h5>
+          <p>Data 101: Introduction to Mapping was the very first workshop I took in hopes that I would gain knowledge to help me with my digital methods research. Overall, the workshop consisted of about four activities total. The exercises ranged from regional analysis of dogs to mapping a virus/epidemic – I honestly cannot remember the exact problem we were trying to solve- however, I do still have the map (it’s a drawn street view with sections and dots).</p>
+          <p>Although these tasks may seem easy to some, I realized I am not as familiar with mapping/cartography as I thought I would be. These activities weren’t terribly hard, however, I haven’t had to actively think spatially in years! Aside from the occasional PokemonGo gameplay, I heavily rely on GPS, or some other service/device to “think spatially” on my behalf. So, this workshop ended up being a great way for me to start thinking in a more spatial manner.</p>
+          <center><iframe src="https://www.hsls.pitt.edu/instruction/data-101-introduction-mapping/1141" width="800px" height="600px">DATA 101: INTRODUCTION TO MAPPING</a>.</iframe></center>
+      
+        <h5>SHANNON MATTERN</h5>
+          <p>In this workshop, we broke into groups based on programmatic themes.  Thinking in transdisciplinary terms, we attempted to construct a social and structural organization. We discussed topics such as digital inclusion being transformed into digital equity and the subsequent pedagogical challenges.</p>
+          <p>This workshop enabled me to think in terms of specific methods and skills and posit what different disciplines and fields we can draw information and expertise from in order to gain further knowledge. My key takeaways from this workshop were to critically think about where the intersection of my research lives and what other disciplines I might be able to utilize on order to learn about new methods/approaches and how other might see the “spectrum” problem.</p>
+          <center><iframe src="http://www.dhrx.pitt.edu/course/new-school-graduate-seminar-with-shannon-mattern/" width="800px" height="600px">SHANNON MATTERN</a>.</iframe></center>
+      
+        <h5>LUNCH W/ ANNETTE VEE</h5>
+          <p>Lunch was delicious! Panera is simple, but never disappoints…and neither did my conversation with Annette Vee. Although brief, I got the chance to discuss some of the woes I had with my research. Although the focus of my research for this series of courses has been commercial spectrum regulated by the FCC, for the past couple of years I have been trying to understand the governance of federal spectrum more in order to have a well-rounded picture and research product. Unfortunately, it seems as though many have had issues with pinning down an National Information and Telecommunications Agency (NTIA) employee or even receiving documents through Freedom of Information Act (FOIA) requests.</p>
+          <p>I left the conversation feeling justified – and less crazy. Some information/ research areas of interest take more time to gather data than others. In some respect, I feel fortunate enough to have been able to come across a dataset directly from the FCC. However, it makes me wonder if I will ever get close to a similar dataset – or even similar issues – for federal spectrum users.</p>
+          <center><iframe src="http://www.composition.pitt.edu/person/annette-vee" width="800px" height="600px">ANNETTE VEE</a>.</iframe></center>
+      
+        <h5>JACK HESSEL</h5>
+          <p>The workshop conducted by Jack Hessel was one of the only workshops that I attended where we dug right into the computational investigation of digital methods. This workshop was pretty intense, but in terms of completely reshaping my perspective on my dataset, it probably gave me the most hope that my data was not a complete dumpster dive and that I might eventually – one days, no time soon – be able to analyze my documents using current digital approaches.</p>
+          <p>By being able to see the code categorize airplanes or cats, by making the images sharper or giving it specific parameters to “look” for, I started to think how this may be able to work in terms of text and the FCC records that I was not able to scrape using code. Essentially, if I turned each document from the FCC into an image, and through manipulating the code…would I eventually be able to have a program that could “read” my documents and provide output for specific terms like MHz and harmful interference? I still have not set aside the time to attempt this method, however, it a future aspiration that I hope to bring to fruition.</p>
+          <center><iframe src="https://avindhsig.wordpress.com/aligning-images-and-text-in-a-digital-library/" width="800px" height="600px">JACK HESSEL</a>.</iframe></center>
+      
+        <h5>WORLD HISTORY SYMPOSIUM (w/ GIS WORKSHOP)</h5>
+          <p>The final event that I attended was the World History Symposium that was held at the start of this current semester. At the symposium, I had the opportunity to experience and engage with scholars utilizing GIS for their research and the specific issues that they had to deal with regarding their datasets and tools, as well as their solutions.</p>
+          <p>Additionally, during the GIS workshop portion, I was able to see how QGIS – a tool I had previously disregarded – could be used to tell a historical and spatial narrative leveraging story maps. After learning about this plug in for QGIS, it renewed my interest in this tool as future approach to my dataset (at the time of this symposium, I had still not completed my data collection for the entire corpus of violations). However, the end products that were presented piqued my interest in using this application for my dissertation – at which point, I will be investigating all violations that fall under the FCC’s purview.</p>
+          <center><iframe src="https://www.worldhistory.pitt.edu/event/globalizing-world-history" width="800px" height="600px">WORLD HISTORY SYMPOSIUM (w/ GIS WORKSHOP)</a>.</iframe></center>
      </div>
 
   <button class="accordion">MILESTONE III - CAPSTONE | FALL 2018</button>
